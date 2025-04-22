@@ -95,14 +95,15 @@ int main() {
     densidadedemografica2 = populacao2/km22;
     // Comparação de Cartas:
 
-    printf("===Menu de comparação===");
-    printf("[1] Nome do Cidade");
-    printf("[2] População");
-    printf("[3] Área");
-    printf("[4] PIB");
-    printf("[5] Número de pontos turísticos");
-    printf("[6] Densidade demográfica");
-    scanf("%d", &opcao)
+    printf("===Menu de comparação===\n");
+    printf("[1] Nome do Cidade\n");
+    printf("[2] População\n");
+    printf("[3] Área\n");
+    printf("[4] PIB\n");
+    printf("[5] Número de pontos turísticos\n");
+    printf("[6] Densidade demográfica\n");
+    printf("Qual a opção? ");
+    scanf("%d", &opcao);
 
     printf("\nComparando %s e %s:\n\n", cidade, cidade2);
 
