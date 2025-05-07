@@ -1,74 +1,81 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+Super Trunfo - Comparação com Dois Atributos
+============================================
 
-# Desafio Super Trunfo - Países - Comparação das Cartas
+Este é um programa em linguagem C que simula uma comparação de cartas no estilo Super Trunfo,
+onde duas cidades são comparadas com base em dois atributos escolhidos pelo usuário.
 
-Bem-vindo ao desafio "Super Trunfo - Países"! Neste projeto, você desenvolverá um sistema para comparar cartas baseadas em atributos de cidades. O desafio é dividido em três níveis: Novato, Aventureiro e Mestre. Cada nível adiciona novas funcionalidades e complexidades, permitindo um aprendizado progressivo.
+✅ Requisitos
+------------
+- Compilador C (como gcc)
+- Terminal ou Prompt de Comando
 
-## 🏅 Nível Novato
+🛠️ Como Compilar
+-----------------
+No terminal, use o seguinte comando:
 
-No nível Novato, você começará implementando a lógica básica de comparação entre cartas utilizando estruturas de decisão `if` e `if-else`.
+    gcc -o super_trunfo super_trunfo.c
 
-### 🚩 Objetivos:
-- **Cadastro de Cartas:** O sistema permitirá ao usuário cadastrar cartas de cidades, incluindo informações como estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
-- **Comparação de Cartas:** O sistema comparará os atributos de duas cartas e determinará a vencedora com base em uma propriedade específica (população, área, PIB, etc.), escolhida no código.
-- **Exibição de Resultados:** Após a comparação, o sistema exibirá qual carta venceu com base na regra: maior valor vence, exceto em densidade populacional, onde o menor valor é o vencedor.
+Isso irá gerar um executável chamado 'super_trunfo'.
 
-### 📥 Entrada de Dados:
-- Os dados das cartas serão inseridos manualmente via terminal.
-- O sistema solicitará interativamente as informações de cada carta.
+▶️ Como Executar
+----------------
+No terminal, após compilar:
 
-### 📤 Saída de Dados:
-- Após o cadastro, as propriedades da cidade serão exibidas de forma organizada.
-- O resultado da comparação será mostrado, indicando a carta vencedora.
+    ./super_trunfo
 
----
+No Windows:
 
-## 🏅 Nível Aventureiro
+    super_trunfo.exe
 
-No nível Aventureiro, você expandirá o sistema para incluir a comparação aninhada e a criação de um menu interativo usando `switch`.
+🧾 Exemplo de Uso
+-----------------
+***Cadastro Da Carta 1***
+Codigo da carta: C01
+Estado: SP
+Cidade: SaoPaulo
+Populacao: 12300000
+PIB: 2200000000000
+Area (km2): 1521
+Pontos Turisticos: 10
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Menu Interativo:** O usuário poderá escolher diferentes atributos para comparação através de um menu.
-- **Comparação Aninhada:** Implementação de lógica de comparação mais complexa, utilizando estruturas aninhadas para tomar decisões baseadas em múltiplos atributos.
+***Cadastro Da Carta 2***
+Codigo da carta: C02
+Estado: RJ
+Cidade: RioDeJaneiro
+Populacao: 6700000
+PIB: 400000000000
+Area (km2): 1200
+Pontos Turisticos: 15
 
-### 🚩 Novas Funcionalidades:
-- **Cadastro de Cartas:** Similar ao nível Novato, com a adição de comparação de múltiplos atributos.
-- **Menu Interativo:** Uso de `switch` para criar um menu que permite ao jogador escolher os atributos a serem comparados.
-- **Exibição de Resultados:** O sistema exibirá o resultado da comparação, indicando qual carta venceu e qual atributo foi utilizado.
+=== Escolha do Primeiro Atributo ===
+1. Populacao
+2. Area
+3. PIB
+4. Pontos Turisticos
+5. Densidade Demografica
+> 1
 
----
+=== Escolha do Segundo Atributo (diferente do primeiro) ===
+2. Area
+3. PIB
+4. Pontos Turisticos
+5. Densidade Demografica
+> 5
 
-## 🏅 Nível Mestre
+🧮 Atributos Disponíveis
+------------------------
+Durante a execução, o usuário pode escolher dois atributos para comparar entre as cartas:
 
-No nível Mestre, o desafio se intensifica com a adição de funcionalidades avançadas, como menus dinâmicos e lógica de decisão complexa com operadores ternários.
+| Código | Atributo                | Quanto maior, melhor? |
+|--------|-------------------------|------------------------|
+| 1      | População               | Sim                   |
+| 2      | Área (km²)              | Sim                   |
+| 3      | PIB (Produto Interno Bruto) | Sim               |
+| 4      | Pontos Turísticos       | Sim                   |
+| 5      | Densidade Demográfica   | Não (quanto menor, melhor)
 
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Escolha de Dois Atributos:** O usuário poderá escolher dois atributos para comparação entre as cartas.
-- **Lógica de Decisão Complexa:** Implementação de estruturas de decisão aninhadas e encadeadas, além do uso de operadores ternários para determinar a carta vencedora.
-- **Menus Dinâmicos:** Os menus serão dinâmicos, permitindo uma navegação fluida entre as opções de comparação.
-
-### 🚩 Novas Funcionalidades:
-- **Comparação de Dois Atributos:** O sistema comparará dois atributos simultaneamente para determinar a carta vencedora.
-- **Lógica Avançada:** Uso de operadores ternários e lógica aninhada para lidar com comparações complexas.
-- **Empates:** O sistema será capaz de lidar com empates, exibindo mensagens apropriadas.
-- **Exibição de Resultados:** Exibição dos resultados das comparações de forma clara e interativa.
-
----
-
-## 📋 Requisitos Funcionais Comuns
-- **Cadastro de Cartas:** O sistema deve permitir o cadastro de cartas com as informações necessárias.
-- **Comparação:** O sistema deve comparar as cartas e determinar a vencedora com base nas regras estabelecidas.
-- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara, indicando a carta vencedora.
-
-## 📌 Requisitos Não Funcionais Comuns
-- **Usabilidade:** A interface do usuário deve ser simples e intuitiva.
-- **Performance:** O sistema deve executar operações sem atrasos perceptíveis.
-- **Manutenibilidade:** O código deve ser bem estruturado e documentado.
-- **Confiabilidade:** O sistema deve ser robusto e capaz de lidar com entradas inválidas de forma adequada.
-
----
-
-Boa sorte no desenvolvimento deste desafio e aproveite para aprender e se divertir enquanto progride pelos níveis!
-
-Equipe de Ensino - MateCheck
+🏆 Critérios de Vitória
+-----------------------
+- Cada carta ganha 1 ponto por atributo vencido.
+- No final, a carta com maior soma dos dois atributos escolhidos é a vencedora.
+- Em caso de empate, o programa exibe "Empate!".
